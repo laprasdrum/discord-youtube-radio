@@ -1,0 +1,35 @@
+{
+  "name": "discord-youtube-radio",
+  "version": "0.1.0",
+  "description": "receive request on text ch., play on voice ch.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/laprasdrum/discord-youtube-radio",
+  "author": "laprasdrum <laprasdrum@yuyacat.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "dev:watch": "ts-node-dev --respawn src/index.ts",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc",
+    "start": "node ."
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.9.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3",
+    "yarn-run-all": "^3.1.1"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.1.0",
+    "@types/ws": "^7.2.4",
+    "discord.js": "^12.2.0",
+    "ffmpeg-static": "^4.1.1",
+    "opusscript": "^0.0.7",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.1.0",
+    "ytdl-core": "^2.1.1"
+  }
+}
