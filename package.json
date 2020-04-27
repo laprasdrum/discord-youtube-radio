@@ -7,12 +7,14 @@
   "author": "laprasdrum <laprasdrum@yuyacat.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/index.ts",
-    "dev:watch": "ts-node-dev --respawn src/index.ts",
     "clean": "rimraf dist/*",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
-    "start": "node ."
+    "start": "ts-node src/index.ts",
+    "watch": "ts-node-dev --respawn src/index.ts"
+  },
+  "engine": {
+    "node": "14.x"
   },
   "devDependencies": {
     "@types/node": "^13.13.2",

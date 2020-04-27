@@ -19,7 +19,7 @@ node v14.0.0
 nvm use
 yarn install
 yarn build
-yarn dev:watch
+yarn start
 ```
 
 ## LICENSE
