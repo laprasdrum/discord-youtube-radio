@@ -19,6 +19,11 @@ node v14.0.0
 nvm use
 yarn install
 yarn build
+
+# on debug
+yarn dev
+
+# on prod
 yarn start
 ```
 

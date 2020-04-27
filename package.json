@@ -10,10 +10,11 @@
     "clean": "rimraf dist/*",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
-    "start": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
     "watch": "ts-node-dev --respawn src/index.ts"
   },
-  "engine": {
+  "engines": {
     "node": "14.x"
   },
   "devDependencies": {

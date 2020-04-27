@@ -19,8 +19,7 @@ export const youtubeRadio: Command = {
     const client = container.resolve(DiscordClient)
     let dispatcher = client.voiceConnection?.play(ytdl(content, {
       quality: 'highestaudio',
-      filter: 'audioonly',
-      highWaterMark: 1048576
+      filter: 'audioonly'
     }))
     dispatcher?.setVolume(0.5)
     console.log(`play ${content}`)
