@@ -12,6 +12,8 @@ node v14.0.0
   - token for your bot
 - `DISCORD_VOICE_CH_ID`
   - voice channel ID the bot joins
+- `YOUTUBE_DATA_API_KEY` (optional)
+  - API key for YouTube Search
 
 ## Setup
 

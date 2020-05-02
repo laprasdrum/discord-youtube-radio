@@ -5,7 +5,7 @@ import "reflect-metadata"
 import { container } from "tsyringe"
 import { DiscordClient } from "../../discord_client"
 
-export const youtubeRadio: Command = {
+export const linkToPlay: Command = {
   name: 'link of YouTube',
   matches(content: string): boolean {
     return content.toLowerCase().match(/^http(s)?:\/\/(www.youtube.com\/watch\?v\=|youtu.be\/)(.+)/) !== null

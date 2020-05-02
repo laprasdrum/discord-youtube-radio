@@ -1,6 +1,6 @@
 import { Client, Message, VoiceChannel, VoiceConnection, StreamDispatcher } from 'discord.js'
 import { environments } from './plugins/environments'
-import { commands } from './commands/implementations/index'
+import { orderedCommands } from './commands/implementations/index'
 import { CommandCategory } from './commands/command'
 import { singleton } from 'tsyringe'
 
@@ -19,7 +19,7 @@ export class DiscordClient {
     this.shared.on('message', async (message: Message) => {
       const content = this.mentionedContentFrom(message)
       if (!content) return
-      const command = commands.find(command => command.matches(content))
+      const command = orderedCommands.find(command => command.matches(content))
       if (!command) return
       switch (command.category) {
         case CommandCategory.Text:

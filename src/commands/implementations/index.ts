@@ -1,5 +1,5 @@
 import { Command, CommandCategory } from '../command'
-import { Message, VoiceConnection } from 'discord.js'
+import { Message } from 'discord.js'
 
 export const help: Command = {
   name: 'help',
@@ -9,7 +9,7 @@ export const help: Command = {
   description: 'the command that you did :)',
   category: CommandCategory.Text,
   executeText(message: Message): void {
-    let help = commands.map(command => `\`${command.name}\`: ${command.description}`).join('\n')
+    let help = orderedCommands.map(command => `\`${command.name}\`: ${command.description}`).join('\n')
     message.channel.send(help)
   },
   executeVoice(content: string) {
@@ -18,12 +18,14 @@ export const help: Command = {
 }
 
 import { ping } from './ping'
-import { youtubeRadio } from './youtube_radio'
+import { linkToPlay } from './link_to_play'
 import { stop } from './stop'
+import { searchToPlay } from './search_to_play'
 
-export const commands: Command[] = [
+export const orderedCommands: Command[] = [
   ping,
-  youtubeRadio,
+  linkToPlay,
   stop,
-  help
+  help,
+  searchToPlay
 ]

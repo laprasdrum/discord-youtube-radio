@@ -1,5 +1,5 @@
 import { Command, CommandCategory } from '../command'
-import { Message, VoiceConnection } from 'discord.js'
+import { Message } from 'discord.js'
 import "reflect-metadata"
 import { container } from "tsyringe"
 import { DiscordClient } from "../../discord_client"

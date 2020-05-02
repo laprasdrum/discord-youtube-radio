@@ -1,5 +1,5 @@
 import { Command, CommandCategory } from '../command'
-import { Message, VoiceConnection } from 'discord.js'
+import { Message } from 'discord.js'
 
 export const ping: Command = {
   name: 'ping',
