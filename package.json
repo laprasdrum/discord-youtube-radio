@@ -29,7 +29,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.1.0",
     "@types/ws": "^7.2.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "discord.js": "^12.2.0",
     "ffmpeg-static": "^4.1.1",
     "opusscript": "^0.0.7",
